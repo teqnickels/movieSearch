@@ -1,10 +1,10 @@
 ## Movie Search CLI
 # Skills
 
--[] Can make HTTP requests from Node
--[] Can write Asynchronous code in JavaScript and Node
--[] Can extract data from HTML in Node
--[] Can scrape a web page in Node
+- [] Can make HTTP requests from Node
+- [] Can write Asynchronous code in JavaScript and Node
+- [] Can extract data from HTML in Node
+- [] Can scrape a web page in Node
 
 ## Exercise
 
