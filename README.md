@@ -1,5 +1,5 @@
-#Movie Search CLI
-## Skills
+## Movie Search CLI
+# Skills
 
 - [ ] Can make HTTP requests from Node
 - [ ] Can write Asynchronous code in JavaScript and Node
