@@ -1,16 +1,16 @@
-## Movie Search CLI
-# Skills
+# Movie Search CLI
+## Skills
 
 - [ ] Can make HTTP requests from Node
 - [ ] Can write Asynchronous code in JavaScript and Node
 - [ ] Can extract data from HTML in Node
 - [ ] Can scrape a web page in Node
 
-# Exercise
+## Exercise
 
 Write a Node.js script called movie-search.js that takes a search term as the first argument. Your script should then print in the console the titles, release years, and title types of the movies in the "Title" section of the page that IMDB displays in response to a search for that term, parenthesizing the years and types as IMDB does.
 
-# Example usage
+## Example usage
 
 $ node movie-search.js "findingnemo"
 Finding Nemo (2003)
