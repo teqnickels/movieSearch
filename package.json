@@ -23,6 +23,7 @@
     "chai": "^4.1.1",
     "cheerio": "^1.0.0-rc.2",
     "cheerio-tableparser": "^1.0.1",
-    "mocha": "^3.5.0"
+    "mocha": "^3.5.0",
+    "nock": "^9.0.14"
   }
 }
