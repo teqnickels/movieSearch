@@ -1,13 +1,12 @@
 const cheerio = require('cheerio')
-  cheerioTableparser = require('cheerio-tableparser');
+var cheerioTableparser = require('cheerio-tableparser');
 const http = require('http')
 var searchTerm = process.argv[2]
 const fs = ('fs')
 
 
-var target = `http://www.imdb.com/find?ref_=nv_sr_fn&q=${searchTerm}&s=all`
-
-var search = () => {
+var search = (term, callback) => {
+  var target = `http://www.imdb.com/find?ref_=nv_sr_fn&q=${term}&s=all`
   http.get(target, (response) => {
     var body = ''
     response.on('data', (chunk) => {
@@ -26,7 +25,7 @@ var search = () => {
           return a.concat(b)
         }
       }, [])
-      format(newArr)
+      callback(format(newArr))
     })
     response.on('error', function(err) {
       console.log(err);
@@ -35,9 +34,18 @@ var search = () => {
 }
 
 var format = (array) => {
+  let str = ''
+
   for (var i = 0; i < array.length; i++) {
-    console.log(array[i]);
+    str += array[i] + '\n'
   }
+
+  console.log('========>', str)
+  return str
 }
 
-search()
+if(require.main === module) {
+  search(searchTerm, () => {})
+}
+
+module.exports = search
