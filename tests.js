@@ -2,7 +2,6 @@ import { assert, expect } from 'chai'
 import movieSearch from './movie-search.js'
 import http from 'http'
 import nock from 'nock'
-// import body from './body'
 
 describe('movieSearch', () => {
   'use strict'
