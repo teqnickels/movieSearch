@@ -39,6 +39,7 @@ var format = (array) => {
   for (var i = 0; i < array.length; i++) {
     str += array[i] + '\n'
   }
+  console.log(str);
   return str
 }
 
