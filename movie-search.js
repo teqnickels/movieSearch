@@ -1,3 +1,4 @@
+const rp = require('request-promise');
 const cheerio = require('cheerio')
 var cheerioTableparser = require('cheerio-tableparser');
 const http = require('http')
@@ -27,7 +28,7 @@ var search = (term, callback) => {
       }, [])
       callback(format(newArr))
     })
-    response.on('error', function(err) {
+    response.on('error', (err) => {
       console.log(err);
     })
   })
@@ -35,12 +36,9 @@ var search = (term, callback) => {
 
 var format = (array) => {
   let str = ''
-
   for (var i = 0; i < array.length; i++) {
     str += array[i] + '\n'
   }
-
-  console.log('========>', str)
   return str
 }
 
